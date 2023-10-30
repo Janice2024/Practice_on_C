@@ -1,0 +1,273 @@
+path_planning
+
+(1) Run ./path-step1
+    You will see that it prints:
+
+        Expect exactly one command line argument !
+    
+    which is correct because there should be a command line argument storing graph info;
+
+(2) Run ./path-step1 graph1.txt
+    You will see that it prints:
+
+        (1,0) (1,0.4) (2,0.4) (2,0.5) 
+        0: 1,0.4 2,1.07703 
+        1: 0,0.4 3,1.00499 
+        2: 0,1.07703 
+        3: 1,1.00499 
+    
+    which is correct because even though the nodes are not put in by the oder of id, 
+    the input format is legal so the graph is printed out correctly;
+(3) Run ./path-step1 broken_graph1.txt
+    You will see that it prints:
+
+    Wrong format! 
+    
+    which is correct because the broken_graph1.txt does not include an $edges section;
+
+(4) Run ./path-step1 broken_graph2.txt
+    You will see that it prints:
+
+    Put in node info first!
+    
+    which is correct because the broken_graph1.txt does not include an $nodes section;
+
+(5) Run ./path-step1 broken_graph3.txt
+    You will see that it prints:
+
+    There is no such a node!
+    
+    which is correct because in broken_graph1.txt the $edges section contains a node that does not appear
+     in the $nodes section;
+
+    (5) Run ./path-step1 broken_graph3.txt
+        You will see that it prints:
+
+        There is no such a node!
+
+    which is correct because in broken_graph4.txt there are four number in the same line under $nodes 
+    section;
+
+(6) Run ./path-step2 grid_map.txt
+    You will see that it prints:
+
+    Expect exactly three command line argument !
+    
+    which is correct because the second and the thrid argument should be the start and the goal node;
+
+
+(7) Run ./path-step2 grid_map.txt 0 23
+    You will see that it prints:
+
+        0 1 : 0.5
+        0 6 : 0.4
+        0 7 : 0.640312
+        0 6 12 : 0.8
+        0 6 13 : 1.04031
+        0 1 2 : 1
+        0 1 8 : 1.14031
+        0 7 14 : 1.28062
+        0 6 12 18 : 1.2
+        0 6 12 19 : 1.44031
+        0 1 2 3 : 1.5
+        0 1 2 9 : 1.64031
+        0 6 13 20 : 1.68062
+        0 1 8 15 : 1.78062
+        0 7 14 21 : 1.92094
+        0 1 2 3 4 : 2
+        0 1 2 3 10 : 2.14031
+        0 1 2 9 16 : 2.28062
+        0 1 8 15 22 : 2.42094
+        0 1 2 3 4 5 : 2.5
+        0 1 2 3 4 11 : 2.64031
+        0 1 2 3 10 17 : 2.78062
+        0 1 2 9 16 23 : 2.92094
+        Best path: 0 1 2 9 16 23 : 2.92094
+    
+    which is correct according to the path_planning.txt.
+
+
+(8) ./path-step2 grid_map.txt 0 24
+    You will see that it prints:
+
+    Invalid input!
+    
+    which is correct because 24 is not a node included in the graph.
+    
+    
+(9) ./path-step3 grid_map.txt obstacle.txt 0 23
+    You will see that it prints:
+        0 1 : 0.5
+        0 6 : 0.4
+        0 7 : 0.640312
+        0 6 12 : 0.8
+        0 6 13 : 1.04031
+        0 1 2 : 1
+        0 1 8 : 1.14031
+        0 7 14 : 1.28062
+        0 6 12 18 : 1.2
+        0 6 12 19 : 1.44031
+        0 6 13 20 : 1.68062
+        0 1 8 9 : 1.64031
+        0 6 13 20 15 : 2.32094
+        0 6 13 20 21 : 2.18062
+        0 6 13 20 21 16 : 2.82094
+        0 6 13 20 21 22 : 2.68062
+        0 6 13 20 15 10 : 2.96125
+        0 6 13 20 15 16 : 2.82094
+        0 6 13 20 21 22 17 : 3.32094
+        0 6 13 20 21 22 23 : 3.18062
+        0 6 13 20 15 16 11 : 3.46125
+        0 6 13 20 15 16 17 : 3.32094
+        0 6 13 20 15 10 3 : 3.60156
+        0 6 13 20 15 10 4 : 3.36125
+        0 6 13 20 15 10 5 : 3.60156
+        0 6 13 20 15 10 11 : 3.46125
+        Best path: 0 6 13 20 21 22 23 : 3.18062
+
+    which aligns with the path_planning.txt;
+
+(10) Run ./path-step3 grid_map.txt broken_obstacle.txt 0 23
+    You will see that it prints:
+
+    Invalid obstacle!
+    
+    
+    which is correct because an obstacle is a list of two or more nodes that
+    form a line segment or polygon.
+
+
+
+
+
+(11) Run ./path-step3 grid_map.txt obstacle2.txt 0 23
+    You will see that it prints: 
+        0 1 : 0.5
+        0 6 : 0.4
+        0 7 : 0.640312
+        0 6 12 : 0.8
+        0 6 13 : 1.04031
+        0 1 2 : 1
+        0 1 8 : 1.14031
+        0 7 14 : 1.28062
+        0 6 12 18 : 1.2
+        0 6 12 19 : 1.44031
+        0 1 2 3 : 1.5
+        0 1 2 9 : 1.64031
+        0 6 13 20 : 1.68062
+        0 1 8 15 : 1.78062
+        0 7 14 21 : 1.92094
+        0 1 2 3 4 : 2
+        0 1 2 3 10 : 2.14031
+        0 1 2 9 16 : 2.28062
+        0 1 8 15 22 : 2.42094
+        0 1 2 3 4 5 : 2.5
+        0 1 2 3 4 11 : 2.64031
+        0 1 2 3 10 17 : 2.78062
+        0 1 2 9 16 23 : 2.92094
+        Best path: 0 1 2 9 16 23 : 2.92094
+    
+    which is correct because there is zero obstacle contained in obstacle2.txt;
+   
+(12) Run ./path-step3 graph2.txt obstacle3.txt 0 1
+    You will see that it prints: 
+
+    Path not found
+
+    which is correct, because the all paths are completely obstructed.
+
+
+(13) Run ./path-step3 graph2.txt obstacle4.txt 0 3
+You will see that it prints: 
+
+    There is no such a node!
+
+    which is correct, because the obstacle node 24 is not included in the graph;
+
+(14) Run ./path-step3 graph3.txt obstacle5.txt 0 3
+You will see that it prints: 
+
+    0 1 : 0.5
+    Path not found
+
+    which is correct, because the this is the special case where the obstacleNoeds are in the same line
+    with the only path.
+
+(15) Run ./path-step4 grid_map.txt obstacle.txt 0 23 -a
+You will see that it prints: 
+
+    0 1 : 0.5
+    0 6 : 0.4
+    0 7 : 0.640312
+    0 7 2 : 1.28062
+    0 7 8 : 1.14031
+    0 7 12 : 1.28062
+    0 7 13 : 1.04031
+    0 7 14 : 1.28062
+    0 1 2 : 1
+    0 7 8 9 : 1.64031
+    0 6 12 : 0.8
+    0 7 13 18 : 1.68062
+    0 7 13 19 : 1.44031
+    0 7 13 20 : 1.68062
+    0 7 13 20 15 : 2.32094
+    0 7 13 20 21 : 2.18062
+    0 7 13 20 21 16 : 2.82094
+    0 7 13 20 21 22 : 2.68062
+    0 7 13 20 21 22 17 : 3.32094
+    0 7 13 20 21 22 23 : 3.18062
+    Best path: 0 7 13 20 21 22 23 : 3.18062
+
+    which is correct, because this is the time when we read "-a" from the in put and use 
+    A* algorithm to find the shortest path in an obstructed graph which is the same as shown 
+    in the path_planning.txt.
+
+
+(16) Run ./path-step4 grid_map.txt obstacle.txt 0 23
+You will see that it prints: 
+
+    0 1 : 0.5
+    0 6 : 0.4
+    0 7 : 0.640312
+    0 6 12 : 0.8
+    0 6 13 : 1.04031
+    0 1 2 : 1
+    0 1 8 : 1.14031
+    0 7 14 : 1.28062
+    0 6 12 18 : 1.2
+    0 6 12 19 : 1.44031
+    0 6 13 20 : 1.68062
+    0 1 8 9 : 1.64031
+    0 6 13 20 15 : 2.32094
+    0 6 13 20 21 : 2.18062
+    0 6 13 20 21 16 : 2.82094
+    0 6 13 20 21 22 : 2.68062
+    0 6 13 20 15 10 : 2.96125
+    0 6 13 20 15 16 : 2.82094
+    0 6 13 20 21 22 17 : 3.32094
+    0 6 13 20 21 22 23 : 3.18062
+    0 6 13 20 15 16 11 : 3.46125
+    0 6 13 20 15 16 17 : 3.32094
+    0 6 13 20 15 10 3 : 3.60156
+    0 6 13 20 15 10 4 : 3.36125
+    0 6 13 20 15 10 5 : 3.60156
+    0 6 13 20 15 10 11 : 3.46125
+    Best path: 0 6 13 20 21 22 23 : 3.18062
+
+    which is correct, because this is the time when we do not read "-a" from the in put and use 
+    Dijkstra algorithm to find the shortest path in an obstructed graph which is the same as shown 
+    in the path_planning.txt.
+
+(17) Run ./path-step4 grid_map.txt obstacle.txt 0 24 -a
+You will see that it prints: 
+
+    Invalid input! 
+
+    which is correct because 24 is not a node included in the graph;
+
+(18) Run ./path-step4 grid_map.txt obstacle.txt 0 -a
+You will see that it prints: 
+
+    Invalid argument input!
+
+    which is correct because the goal node is missing here;

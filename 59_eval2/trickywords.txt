@@ -1,0 +1,6 @@
+animal::
+animal:walrus
+animal:narwhal
+place:cave
+place:tree
+adjective:peculiar

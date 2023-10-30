@@ -1,0 +1,5 @@
+#error
+story-step1 broken.txt
+
+#success
+story-step1 trickystory.txt

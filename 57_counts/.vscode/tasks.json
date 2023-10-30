@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Create_Program",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++11",
+                "-g",
+                "$(find",
+                // Replace folder_name with the folder that you want compiled.
+                "${fileDirname}",
+                "-type",
+                "f",
+                "-iregex",
+                "'.*\\.c*')",
+                "-o",
+                // Replace folder_name/program_name with the name of the program
+                // and the location you want it in.
+                "${fileDirname}/progam_name"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent",
+                "clear": true,
+                "showReuseMessage": false
+            }
+        }
+    ]
+}

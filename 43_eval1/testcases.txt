@@ -1,0 +1,14 @@
+#error
+printRoster invalid.txt
+printStats roster.txt
+printStats error_roster1.txt
+printStats error_roster2.txt
+printStats error_roster3.txt
+printStats error_roster4.txt
+
+#success
+printRoster roster.txt
+printStats simple_roster.txt simple_game1.txt
+printStats simple_roster.txt simple_game1.txt simple_game2.txt
+printDoubleDouble simple_roster.txt simple_game2.txt
+printPosPoints simple_roster.txt simple_game1.txt

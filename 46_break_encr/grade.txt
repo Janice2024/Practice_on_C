@@ -1,0 +1,18 @@
+Grading at 02/15/2023:02:12:45.481284
+For commit ID c41ab730677cac4bc85d2ead61500c2676b1ec22
+Grading at Tue Feb 14 09:12:40 PM EST 2023
+Attempting to compile
+gcc -o breaker -pedantic -std=gnu99 -Wall -Werror breaker.c
+Found binary 'breaker'
+testcase1 passed
+#################################################
+testcase2:
+testcase2 passed
+#################################################
+testcase3:
+testcase3 passed
+#################################################
+testcase4:
+testcase4 passed
+
+Overall Grade: A

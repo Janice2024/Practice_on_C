@@ -1,0 +1,38 @@
+Grading at 05/05/2023:21:22:22.121061
+For commit ID e1121f89e7890a77d7e5d5d1a7adbc4ec92f2f5e
+Grading at Fri May  5 05:22:21 PM EDT 2023
+=========================================================================
+Functionality
+
+Step 1                                                  [20/20]
+Step 2                                                  [20/30]
+Step 3                                                  [20/30]
+Step 4                                                  [10/15]
+
+Steps 2–4 worked on provided test cases, but not on others. There were errant 
+“path not found” messages or the algorithm did not terminate when it should.
+
+=========================================================================
+Code quality
+
+Abstration:    Excellent
+Naming:        Excellent
+Formatting:    Excellent
+OOP:           Excellent
+Documentation: Excellent
+Quality total                                            [10/10]
+
+Nice abstraction and OOP!
+
+=========================================================================
+Testing
+
+Testing total                                            [9/10]
+
+Pretty good error testing, but needs much more testing for functionality! You 
+should create your own test files and corner cases, and certainly test with 
+different start and goal nodes.
+
+=========================================================================
+
+Overall Grade: 89
